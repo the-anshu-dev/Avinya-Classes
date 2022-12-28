@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avinya Classes</title>
+
+    <link rel="stylesheet" href="css/style.scss">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="content">
+      <img data-aos="fade-up" data-aos-delay="150" src="images/Avinya2.png" alt=""> 
+      <h3 data-aos="fade-up" data-aos-delay="300">Learn <span style="color: #cea364;">Without</span> Limits</h3>
+      <p data-aos="fade-up" data-aos-delay="450">Start, switch, or advance your career with more than 500+ courses, Online and Offline Mode with Smart Classes just at your <span style="color: #cea364;">montly phone-recharge cost</span>.</p>
+      <!-- <a data-aos="fade-up" data-aos-delay="600" href="#menu" class="btn" style="border-radius: 20px;">our menu</a> -->
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+   <div class="heading">
+      <img src="images/title-img.png" alt="">
+      <h3>contact us</h3>
+   </div>
+
+   <div class="row">
+
+      <iframe data-aos="fade-up" data-aos-delay="150" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123.69750506346371!2d80.85185950869847!3d26.849266065101357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bff967f8ac927%3A0x6bbd804238bcdc93!2sAvinya%20Classes%20(Tution)!5e1!3m2!1sen!2sin!4v1671730864221!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <div class="form">
+
+         <div class="icons-container">
+
+            <div class="icons" data-aos="fade-up" data-aos-delay="150">
+               <i class="fas fa-map"></i>
+               <h3>address :</h3>
+               <p>Adarsh Vihar Ring Road,Lucknow,UP - 226017</p>
+            </div>
+
+            <div class="icons" data-aos="fade-up" data-aos-delay="300">
+               <i class="fas fa-envelope"></i>
+               <h3>email :</h3>
+               <p>anshucahurasia210@gmail.com</p>
+               <p>webworld7815@gmail.com</p>
+            </div>
+
+            <div class="icons" data-aos="fade-up" data-aos-delay="450">
+               <i class="fas fa-phone"></i>
+               <h3>phone :</h3>
+               <p>+91 6392457271</p>
+               <p>+91 8546032460</p>
+            </div>
+            
+         </div>
+
+         <form method="POST" data-email="anshuchaurasia210@gmail.com"
+         action="https://script.google.com/macros/s/AKfycbzmxe5JGcNSvsQCydGd8Xsxv2zKWWo0Wup_BZxrQxDXsoJJt3kQgLlfExOmL26UyovvnA/exec">
+            <input data-aos="fade-up" data-aos-delay="150" type="text" placeholder="Enter your full name" class="box" name="Name">
+            <input data-aos="fade-up" data-aos-delay="300" type="email" placeholder="Enter your email" class="box" name="Email">
+            <input data-aos="fade-up" data-aos-delay="450" type="number" placeholder="Enter your phone" class="box" name="Phone">
+            <textarea data-aos="fade-up" data-aos-delay="600"  placeholder="Describe your doubts/queries here...." class="box" id="" cols="30" rows="10" name="Message"></textarea>
+            <input data-aos="fade-up" data-aos-delay="750" type="submit" value="send message" class="btn" style="border-radius: 20px;" href="mailto:anshuchaurasia210@gmail.com" onclick="alert('Thankyou for Contact..! we will contact you soon.. #Avinya_Class')">
+         </form>
+         <div class="content" data-aos="fade-left" data-aos-delay="300">
+         <a href="index.html" class="btn">Back</a>
+      </div>
+
+     
+      
+
+      <script data-cfasync="false" type="text/javascript">
+ 
+         (
+            function() {
+
+      
+        function getFormData(form) {
+          var elements = form.elements;
+      
+          var fields = Object.keys(elements).filter(function(k) {
+                return (elements[k].name !== "honeypot");
+          }).map(function(k) {
+            if(elements[k].name !== undefined) {
+              return elements[k].name;
+            }else if(elements[k].length > 0){
+              return elements[k].item(0).name;
+            }
+          }).filter(function(item, pos, self) {
+            return self.indexOf(item) == pos && item;
+          });
+      
+          var formData = {};
+          fields.forEach(function(name){
+            var element = elements[name];
+            formData[name] = element.value;
+            if (element.length) {
+              var data = [];
+              for (var i = 0; i < element.length; i++) {
+                var item = element.item(i);
+                if (item.checked || item.selected) {
+                  data.push(item.value);
+                }
+              }
+              formData[name] = data.join(', ');
+            }
+          }
+          );
+      
+          // add form-specific values into the data
+          formData.formDataNameOrder = JSON.stringify(fields);
+          formData.formGoogleSheetName = form.dataset.sheet || "AvinyaC"; // default sheet name
+          formData.formGoogleSendEmail = form.dataset.email || "anshuchaurasia210@gmail.com"; // no email by default
+      
+          console.log(formData);
+          return formData;
+        }
+      
+      
+        document.addEventListener("DOMContentLoaded", loaded, false);
+      
+        function disableAllButtons(form) {
+          var buttons = form.querySelectorAll("button");
+          for (var i = 0; i < buttons.length; i++) {
+            buttons[i].disabled = true;
+          }
+        }
+      })();
+      
+      
+        </script>
+
+
+      </div>
+
+   </div>
+
+</section>
+
+<!-- contact section ends -->
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+   
+
+   <p class="credit"> created by | <span>mrs. Avinya designer</span> | © all rights reserved..<i>!!</i> </p>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link      -->
+<script src="js/script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+
+AOS.init({
+   duration: 800,
+});
+
+</script>
+    
+</body>
+</html>
